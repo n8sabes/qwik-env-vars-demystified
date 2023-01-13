@@ -1,10 +1,10 @@
 # Qwik Environment Variables Demystified ⚡️
 
-This project aims to provide insights into what variables are loaded from the `.env` and log how they flow through the `Qwik` application's lifecycle.
+This code repo and video provide insights into environment variables in the Qwik lifecycle, how they are loaded from the `.env` file, and log them as they flow through the application's lifecycle.
 
-You can either watch the video explaining this lifecycle, or install the repo locally to experiment yourself.
+*NOTE:* This is not a comprehensive guide on environment variables, nor does it cover all the 3rd-Party hosting scenarios, but gives insights that can be applied to all environments. Hope it helps.
 
-**NOTE:** This is not intended to be a full guide on environment variables, but only a template project that outputs variables in each context.
+Video Explanation: https://youtu.be/NPf39RWc8LM
 
 ## Installation
 

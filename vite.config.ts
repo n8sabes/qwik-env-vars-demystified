@@ -2,8 +2,8 @@ import { defineConfig, loadEnv } from 'vite';
 import { qwikVite } from '@builder.io/qwik/optimizer';
 import { qwikCity } from '@builder.io/qwik-city/vite';
 import tsconfigPaths from 'vite-tsconfig-paths';
-import os from 'os';
 import * as dotenv from 'dotenv';
+// import os from 'os';
 
 
 export const logEnvVars = (header: string, objLabel?: string, obj?: any, dotenvResult?: any) => {
@@ -18,7 +18,7 @@ export const logEnvVars = (header: string, objLabel?: string, obj?: any, dotenvR
 //
 // SETUP ENVRIONMENT VARIABLES
 //
-const envDir = process?.cwd();
+const envDir = process?.cwd();   // "~/secrets/qwik-env-vars-demystified".replace(/^~\//g, os.homedir() + "/");
 const envFile = ".env"; // `.env.${process?.env.NODE_ENV}`;
 
 //
@@ -35,8 +35,8 @@ logEnvVars("loadEnv() contains only VITE_ vars, NO SECRETS", "loadEnvResult", lo
 //
 // Merge environment variables with process?.env
 //
-Object.assign(process.env, loadEnvResult);  // process.env = { ...process?.env, ...loadEnvResult };
-logEnvVars("merged loadEnv() with process.env");
+// Object.assign(process.env, loadEnvResult);  // process.env = { ...process?.env, ...loadEnvResult };
+// logEnvVars("merged loadEnv() with process.env");
 
 //
 // dotenv.config() loads all variables from the .env file, including secrets
