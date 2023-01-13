@@ -1,0 +1,42 @@
+{
+  "name": "qwik-environment-variables-demystified",
+  "description": "Qwik Environment Variables Demystified",
+  "engines": {
+    "node": ">=15.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "qwik build",
+    "build.client": "vite build",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.types": "tsc --incremental --noEmit",
+    "deploy": "echo 'Run \"npm run qwik add\" to install a server adaptor'",
+    "dev": "vite --mode ssr",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check .",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "preview": "qwik build preview && vite preview --open",
+    "start": "vite --open --mode ssr",
+    "qwik": "qwik"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "0.16.2",
+    "@builder.io/qwik-city": "0.1.0-beta9",
+    "@types/dotenv": "^8.2.0",
+    "@types/eslint": "8.4.10",
+    "@types/node": "^18.11.18",
+    "@types/node-fetch": "^2.6.2",
+    "@typescript-eslint/eslint-plugin": "5.48.1",
+    "@typescript-eslint/parser": "5.48.1",
+    "dotenv": "^16.0.3",
+    "eslint": "8.31.0",
+    "eslint-plugin-qwik": "0.16.2",
+    "node-fetch": "3.3.0",
+    "prettier": "2.8.2",
+    "typescript": "4.9.4",
+    "undici": "5.15.0",
+    "vite": "4.0.4",
+    "vite-tsconfig-paths": "4.0.3"
+  }
+}
